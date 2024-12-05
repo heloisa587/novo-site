@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Busca - GSLimaTec</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="logo">
+            <img src="LogoEmpresa.jpeg" alt="GSLimaTec">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pagamento.html">Formas de Pagamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <h1>Resultados para a sua busca</h1>
+
+        <div class="produto">
+            <img src="assetsimagesproduto1.jpeg" alt="Produto 1">
+            <p>Samsung Galaxy S23 Ultra 5G 256GB 12 GB</p>
+            <p>R$ 4.299,00.</p>
+            <p>Frete: R$ 60,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+        <div class="produto">
+            <img src="assetsimagesproduto2.jpg" alt="Produto 2">
+            <p>Console PlayStation®5 Pro</p>
+            <p>R$6.509,06</p>
+            <p>Frete: R$ 20,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+        <div class="produto">
+            <img src="assetsimagesproduto3.jpeg" alt="Produto 2">
+            <p>Pc Gamer Cpu Computador Intel I7 6700 6a Geração 4.0 Ghz + 16 Gb DDR4 + Ssd 480gb + Fonte 550W + Wi-fi</p>
+            <p>R$ 2.519,08</p>
+            <p>Frete: R$ 40,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+        <div class="produto">
+            <img src="assetsimagesproduto4.jpeg" alt="Produto 2">
+            <p>Bicicleta Elétrica 20 Gtsm1 Freio a Disco 7v Suspensão E-bike V8s 2.0 750w</p>
+            <p>R$ 10.890,00</p>
+            <p>Frete: R$ 20,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+        <div class="produto">
+            <img src="assetsimagesproduto5.jpeg" alt="Produto 2">
+            <p>Relógio Hugo Boss Masculino Silicone Preto</p>
+            <p>R$ 2.050,00</p>
+            <p>Frete: R$ 90,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+        <div class="produto">
+            <img src="assetsimagesproduto6.jpeg" alt="Produto 2">
+            <p>Samsung Galaxy Watch7 Smartwatch 40mm Bluetooth, Galaxy AI, Tela em Cristal de Safira, GPS de Dupla Frequência, Monitoramento avançado de saúde, sono e de coração, Processador de 3nm - Verde</p>
+            <p>R$1.349,10</p>
+            <p>Frete: R$ 15,00</p>
+            <a href="produtos.html">Ver mais</a>
+        </div>
+    </main>
+
+    <script>
+        function filterProducts() {
+            const searchBar = document.getElementById('searchBar');
+            const filter = searchBar.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productName = product.getAttribute('data-name').toLowerCase();
+                if (productName.indexOf(filter) > -1) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        products.forEach(product => {
+            const productName = product.getAttribute('data-name').toLowerCase();
+            if (productName.indexOf(filter) > -1) {
+                product.style.display = '';
+                found = true;
+            } else {
+                product.style.display = 'none';
+            }
+        });
+
+
+        if (!found && filter !== "") {
+            noResultsMessage.style.display = 'block'
+        } else {
+            noResultsMessage.style.display = 'none';
+        }
+
+    </script>
+
+    <footer>
+        <p>&copy; 2024 GSLimaTec. Todos os direitos reservados.</p>
+        <p>Endereço: Rua Duque de Caxias, 123, Araraquara, São Paulo</p>
+    </footer>
+
+</body>
+</html>
