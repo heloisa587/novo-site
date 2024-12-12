@@ -71,41 +71,7 @@
         </div>
     </main>
 
-    <script>
-        function filterProducts() {
-            const searchBar = document.getElementById('searchBar');
-            const filter = searchBar.value.toLowerCase();
-            const products = document.querySelectorAll('.product');
-
-            products.forEach(product => {
-                const productName = product.getAttribute('data-name').toLowerCase();
-                if (productName.indexOf(filter) > -1) {
-                    product.style.display = '';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
-
-        products.forEach(product => {
-            const productName = product.getAttribute('data-name').toLowerCase();
-            if (productName.indexOf(filter) > -1) {
-                product.style.display = '';
-                found = true;
-            } else {
-                product.style.display = 'none';
-            }
-        });
-
-
-        if (!found && filter !== "") {
-            noResultsMessage.style.display = 'block'
-        } else {
-            noResultsMessage.style.display = 'none';
-        }
-
-    </script>
-
+   
     <footer>
         <p>&copy; 2024 HeloisaFerre. Todos os direitos reservados.</p>
         <p>Endereço: Av. São Paulo, 000, Araraquara, São Paulo</p>
